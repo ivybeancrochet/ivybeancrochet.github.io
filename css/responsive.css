@@ -5,34 +5,34 @@
 		margin: 0 0 30px;
 	}
 	/*Banner*/
-	.yoga-template .banner .top-bar-left a {
-		font-size:17px;
+	.crochet-creations .banner .top-bar-left a {
+		font-size: 17px;
 	}
-	.yoga-template .banner .banner-content .content-col {
+	.crochet-creations .banner .banner-content .content-col {
 		padding-left: 30px;
 	}
 	/*Amigurumi of the Month*/
-	.yoga-template .service-section .service-detail > div {
+	.crochet-creations .service-section .service-detail > div {
 		margin-bottom: 40px;
 	}
-	.yoga-template .best-class-club .detail-col-club {
+	.crochet-creations .best-class-club .detail-col-club {
 		padding-right: 15px;
 	}
 
 	/*Copyright*/
-	.yoga-template .footer .copyright,
-	.yoga-template .footer .copyright .social {
+	.crochet-creations .footer .copyright,
+	.crochet-creations .footer .copyright .social {
 		text-align: center;
 	}
 }
 @media (max-width: 767.98px)  { 
 	/*Banner*/
-	.yoga-template .banner .top-bar,
-	.yoga-template .banner .top-bar-right {
+	.crochet-creations .banner .top-bar,
+	.crochet-creations .banner .top-bar-right {
 		text-align: center;
 	}
 	/*Contact us*/
-	.yoga-template .contact-section .appointment 
+	.crochet-creations .contact-section .appointment 
 	.appointment-form .box-select::before {
 	    content: "\f0dd";
 	    font-family: "Font Awesome 5 Free";

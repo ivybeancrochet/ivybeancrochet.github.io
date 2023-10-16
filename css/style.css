@@ -63,7 +63,7 @@ a {
 	text-align: center;
 }
 /*Banner*/
-.yoga-template .banner {
+.crochet-creations .banner {
 	background-image: url(../img/3Bunnies.JPG);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -73,7 +73,7 @@ a {
 	color: #fff;
 	position: relative;
 }
-.yoga-template .banner .banner-overlay {
+.crochet-creations .banner .banner-overlay {
 	position: absolute;
 	top: 0;
     width: 100%;
@@ -82,16 +82,18 @@ a {
     background-color: rgba(0,0,0,.5);
     z-index: 2;
 }
-.yoga-template .banner .top-bar{
+.crochet-creations .banner .top-bar{
 	padding:26px 15px; 
 	border-bottom: 1px solid #fff;
 }
-.yoga-template .banner .top-bar-left ,
+.crochet-creations .banner .top-bar-left {
+	z-index: 3;
+}
 .top-bar-right {
 	padding-top: 24px;	
 	z-index: 3;
 }
-.yoga-template .banner .top-bar-left a {
+.crochet-creations .banner .top-bar-left a {
 	color:#fff;
 	font-size: 18px;
 	letter-spacing: 0.18px;
@@ -99,14 +101,14 @@ a {
 	font-weight: 400;
 	vertical-align: middle
 }
-.yoga-template .banner .logo {
+.crochet-creations .banner .logo {
 	text-align: center;
 	z-index: 3;
 }
-.yoga-template .banner .top-bar-right {
+.crochet-creations .banner .top-bar-right {
 	text-align: right;
 }
-.yoga-template .banner .top-bar-right a {
+.crochet-creations .banner .top-bar-right a {
 	font-family: 'Open Sans', sans-serif;
 	color:#fff;
 	font-size: 18px;
@@ -114,31 +116,31 @@ a {
 	font-weight: 400;
 	vertical-align: middle
 }
-.yoga-template .banner .top-bar-left a:hover,
-.yoga-template .banner .top-bar-right a:hover {
-		color: #DCCB0F;
-		text-decoration: none;
+.crochet-creations .banner .top-bar-left a:hover,
+.crochet-creations .banner .top-bar-right a:hover {
+	color: #DCCB0F;
+	text-decoration: none;
 }
-.yoga-template .banner .top-bar-left i,
+.crochet-creations .banner .top-bar-left i,
 .top-bar-right i {
 	font-size: 16px;
-    background-color: #fff;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    text-align: center;
-    color: #3e2d40;
-    vertical-align: middle;
-    padding-top: 5px;
+	background-color: #fff;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	text-align: center;
+	color: #3e2d40;
+	vertical-align: middle;
+	padding-top: 5px;
 }
-.yoga-template .banner .banner-content {
+.crochet-creations .banner .banner-content {
 	padding: 126px 15px;
 }
-.yoga-template .banner .banner-content .content-col {
+.crochet-creations .banner .banner-content .content-col {
 	text-align: center;
 	z-index: 3;
 }
-.yoga-template .banner .banner-content .site-title {
+.crochet-creations .banner .banner-content .site-title {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 40px;
 	line-height: 40px;
@@ -146,47 +148,47 @@ a {
 	margin-bottom: 18px;
 	padding-right: 15px;
 }
-.yoga-template .banner .banner-content .site-title-desc {
+.crochet-creations .banner .banner-content .site-title-desc {
 	font-size: inherit;
 	line-height: 25px;
 	letter-spacing: 0.45px;
 	margin-bottom: 51px;
 	width: 97%;
 }
-.yoga-template .banner .banner-content a.banner-btn {
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: 20px;
-		line-height: 25px;
-		letter-spacing: 0.6px;
-		font-weight: 700;
-		padding: 21px 32px 19px;
+.crochet-creations .banner .banner-content a.banner-btn {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.6px;
+	font-weight: 700;
+	padding: 21px 32px 19px;
 /*Banner Button*/
-		background-color: #294A8C;
-		color: #fff;
-		border-radius: 3px;
-		text-transform: uppercase;
+	background-color: #294A8C;
+	color: #fff;
+	border-radius: 3px;
+	text-transform: uppercase;
 }
-.yoga-template .banner .banner-content a.banner-btn:hover {
-			text-decoration: none;
-			color: #26251B;
+.crochet-creations .banner .banner-content a.banner-btn:hover {
+		text-decoration: none;
+		color: #26251B;
 }
 /*Amigurumi of the Month*/
-.yoga-template .service-section {
+.crochet-creations .service-section {
 	padding: 62px 15px;
 }
-.yoga-template .service-section .service-detail {
+.crochet-creations .service-section .service-detail {
 	text-align: center;
 }
-.yoga-template .service-section .amigurumi {
+.crochet-creations .service-section .amigurumi {
 }
-.yoga-template .service-section .service-detail a:hover {
-		text-decoration: none;
+.crochet-creations .service-section .service-detail a:hover {
+	text-decoration: none;
 }
-.yoga-template .service-section .service-detail a:hover .service-title{
+.crochet-creations .service-section .service-detail a:hover .service-title {
 	text-decoration: none;
 	color: #fe86d4;
 }
-.yoga-template .service-section .service-title {
+.crochet-creations .service-section .service-title {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 25px;
 	line-height: 40px;
@@ -195,20 +197,20 @@ a {
 	color: #000;
 	margin-bottom: 15px;
 }
-.yoga-template .service-section .service-desc {
+.crochet-creations .service-section .service-desc {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: 25px;
 	font-weight: 400;
 	letter-spacing: 0.40px;
 }
-.yoga-template .service-section .service-detail-img {
+.crochet-creations .service-section .service-detail-img {
 	max-width: 90px;
- 	height: auto;
+	height: auto;
 }
 
 /*Copyright*/
-.yoga-template .footer .copyright {
+.crochet-creations .footer .copyright {
 	padding: 50px 15px;
 	background-color: #193c4d;
 	color: #fff;
@@ -216,10 +218,10 @@ a {
 	font-size: 14px;
 	line-height: 26px;
 }
-.yoga-template .footer .copyright .created-by {
+.crochet-creations .footer .copyright .created-by {
 	color: #fff;
 }
-.yoga-template .footer .copyright .emaillogo {
+.crochet-creations .footer .copyright .emaillogo {
 	color: #fff;
 	font-size: 18px;
 	letter-spacing: 0.18px;
