@@ -5,7 +5,7 @@
 body {
 	width: 100%;
 	height: auto;
-	background-color: #7B9A8A;
+	background-color: #d88668;
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
 	font-size: 15px;
@@ -115,9 +115,9 @@ a {
 	vertical-align: middle
 }
 .yoga-template .banner .top-bar-left a:hover,
-.yoga-template .banner .top-bar-right a:hover{
-	color:#fe86d4;
-	text-decoration: none;
+.yoga-template .banner .top-bar-right a:hover {
+		color: #DCCB0F;
+		text-decoration: none;
 }
 .yoga-template .banner .top-bar-left i,
 .top-bar-right i {
@@ -154,20 +154,21 @@ a {
 	width: 97%;
 }
 .yoga-template .banner .banner-content a.banner-btn {
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 20px;
-	line-height: 25px;
-	letter-spacing: 0.6px;
-	font-weight: 700;
-	padding: 21px 32px 19px;
-	background-color: #fe86d4;
-	color:#fff;
-	border-radius: 3px;
-	text-transform: uppercase;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 0.6px;
+		font-weight: 700;
+		padding: 21px 32px 19px;
+/*Banner Button*/
+		background-color: #294A8C;
+		color: #fff;
+		border-radius: 3px;
+		text-transform: uppercase;
 }
 .yoga-template .banner .banner-content a.banner-btn:hover {
-	text-decoration: none;
-	color: #7b6cd5;
+			text-decoration: none;
+			color: #26251B;
 }
 /*Service*/
 .yoga-template .service-section {
@@ -176,8 +177,11 @@ a {
 .yoga-template .service-section .service-detail {
 	text-align: center;
 }
+.yoga-template .service-section .amigurumi {
+	padding: 62px 220px;
+}
 .yoga-template .service-section .service-detail a:hover {
-	text-decoration: none;
+		text-decoration: none;
 }
 .yoga-template .service-section .service-detail a:hover .service-title{
 	text-decoration: none;
