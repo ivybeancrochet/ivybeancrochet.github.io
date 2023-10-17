@@ -13,6 +13,7 @@ body {
 	font-weight: normal;
 	text-align: left;
 }
+
 h1,h2,h3,
 h4,h5,h6 {
 	font-size: inherit;
@@ -136,6 +137,9 @@ a {
 .crochet-creations .banner .banner-content {
 	padding: 126px 15px;
 }
+.crochet-creations .banner .banner-content .hidden{
+
+}
 .crochet-creations .banner .banner-content .content-col {
 	text-align: center;
 	z-index: 3;
@@ -169,12 +173,20 @@ a {
 	text-transform: uppercase;
 }
 .crochet-creations .banner .banner-content a.banner-btn:hover {
-		text-decoration: none;
-		color: #26251B;
+	text-decoration: none;
+	color: #26251B;
 }
 /*Amigurumi of the Month*/
+
 .crochet-creations .service-section {
 	padding: 62px 15px;
+}
+.crochet-creations .service-section .hiddden {
+	opacity: 0;
+	transition: all 1s;
+}
+.crochet-creations .service-section .show {
+	opacity: 1;
 }
 .crochet-creations .service-section .service-detail {
 	text-align: center;

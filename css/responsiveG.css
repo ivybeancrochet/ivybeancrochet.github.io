@@ -1,0 +1,56 @@
+@media (max-width: 991.98px) {
+
+    /*Global*/
+    .sections-detail {
+        margin: 0 0 30px;
+    }
+    /*Banner*/
+    .crochet-creations .banner .top-bar-left a {
+        font-size: 17px;
+    }
+
+    .crochet-creations .banner .banner-content .content-col {
+        padding-left: 30px;
+    }
+    /*Amigurumi of the Month*/
+    .crochet-creations .service-section .service-detail > div {
+        margin-bottom: 40px;
+    }
+
+    .crochet-creations .best-class-club .detail-col-club {
+        padding-right: 15px;
+    }
+
+    /*Copyright*/
+    .crochet-creations .footer .copyright,
+    .crochet-creations .footer .copyright .social {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /*Banner*/
+    .crochet-creations .banner .top-bar,
+    .crochet-creations .banner .top-bar-right {
+        text-align: center;
+    }
+
+
+    .amigurumi .portrait-image {
+        display: block;
+    }
+
+    .amigurumi .landscape-image {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .amigurumi .portrait-image {
+        display: none;
+    }
+
+    .amigurumi .landscape-image {
+        display: block;
+    }
+}
