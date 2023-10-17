@@ -256,7 +256,7 @@ a {
 /*Footer*/
 .crochet-creations .footer .copyright {
     padding: 50px 15px;
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,0.1);
     color: #fff;
     font-family: inherit;
     font-size: 14px;
