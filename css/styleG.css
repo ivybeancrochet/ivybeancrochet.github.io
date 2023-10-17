@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: auto;
-    background-color: #37514d;
+    background-color: #dea450;
     font-family: 'Open Sans', sans-serif;
     color: #eee6de;
     font-size: 15px;
@@ -94,7 +94,7 @@ a {
 }
 
 .crochet-creations .banner .top-bar {
-    padding: 26px 15px;
+    padding: 26px 150px;
     border-bottom: 1px solid #fff;
 }
 
@@ -252,4 +252,24 @@ a {
 .crochet-creations .service-section .service-detail-img {
     max-width: 90px;
     height: auto;
+}
+/*Footer*/
+.crochet-creations .footer .copyright {
+    padding: 50px 15px;
+    background-color: rgba(0,0,0,.1);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 26px;
+}
+.crochet-creations .footer .copyright .created-by {
+    color: #fff;
+}
+.crochet-creations .footer .copyright .emaillogo {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    vertical-align: middle
 }

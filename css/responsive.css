@@ -19,7 +19,7 @@
 		padding-right: 15px;
 	}
 
-	/*Copyright*/
+	/*Footer*/
 	.crochet-creations .footer .copyright,
 	.crochet-creations .footer .copyright .social {
 		text-align: center;
@@ -31,7 +31,7 @@
 	.crochet-creations .banner .top-bar-right {
 		text-align: center;
 	}
-	/*Contact us*/
+	/*Footer*/
 	.crochet-creations .contact-section .appointment 
 	.appointment-form .box-select::before {
 	    content: "\f0dd";

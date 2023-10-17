@@ -5,8 +5,11 @@
         margin: 0 0 30px;
     }
     /*Banner*/
+    .crochet-creations .banner .top-bar {
+        padding: 40px 50px;
+    }
     .crochet-creations .banner .top-bar-left a {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .crochet-creations .banner .banner-content .content-col {
@@ -21,7 +24,7 @@
         padding-right: 15px;
     }
 
-    /*Copyright*/
+    /*Footer*/
     .crochet-creations .footer .copyright,
     .crochet-creations .footer .copyright .social {
         text-align: center;
@@ -30,7 +33,9 @@
 
 @media (max-width: 767.98px) {
     /*Banner*/
-    .crochet-creations .banner .top-bar,
+    .crochet-creations .banner .top-bar{
+        padding: 40px 50px;
+    }
     .crochet-creations .banner .top-bar-right {
         text-align: center;
     }
