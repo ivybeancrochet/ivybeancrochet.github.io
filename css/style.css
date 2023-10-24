@@ -176,51 +176,15 @@ a {
 	text-decoration: none;
 	color: #26251B;
 }
+
 /*Amigurumi of the Month*/
 
 .crochet-creations .service-section {
 	padding: 62px 15px;
 }
-.crochet-creations .service-section .hiddden {
-	opacity: 0;
-	transition: all 1s;
-}
-.crochet-creations .service-section .show {
-	opacity: 1;
-}
-.crochet-creations .service-section .service-detail {
-	text-align: center;
-}
-.crochet-creations .service-section .amigurumi {
-}
-.crochet-creations .service-section .service-detail a:hover {
-	text-decoration: none;
-}
-.crochet-creations .service-section .service-detail a:hover .service-title {
-	text-decoration: none;
-	color: #fe86d4;
-}
-.crochet-creations .service-section .service-title {
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 25px;
-	line-height: 40px;
-	font-weight: 700;
-	letter-spacing: 0.75px;
-	color: #000;
-	margin-bottom: 15px;
-}
-.crochet-creations .service-section .service-desc {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: 25px;
-	font-weight: 400;
-	letter-spacing: 0.40px;
-}
-.crochet-creations .service-section .service-detail-img {
-	max-width: 90px;
-	height: auto;
-}
+
 /*Titled Photos Sections*/
+
 .crochet-creations .service-section .body {
 	position: relative;
 	left: -529px;
@@ -229,7 +193,7 @@ a {
 	background-color: #ffff;
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 30px;
 	font-weight: normal;
 	text-align: center;
@@ -238,7 +202,9 @@ a {
 	position: relative;
 	left: 254px;
 }
+
 /*Footer*/
+
 .crochet-creations .footer .copyright {
 	padding: 50px 15px;
 	background-color: #193c4d;

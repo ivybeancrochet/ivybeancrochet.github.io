@@ -27,7 +27,7 @@
 		background-color: #ffff;
 		font-family: 'Open Sans', sans-serif;
 		color: #555;
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 30px;
 		font-weight: normal;
 		text-align: center;
@@ -54,12 +54,12 @@
 		background-color: #ffff;
 		font-family: 'Open Sans', sans-serif;
 		color: #555;
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 30px;
 		font-weight: normal;
 		text-align: center;
 	}
-	.crochet-creations .service-section .body .portrait-images {
+	.crochet-creations .service-section .body .portrait-images{
 		display: block;
 	}
 	.crochet-creations .service-section .body .landscape-images{
@@ -72,7 +72,6 @@
 	    font-family: "Font Awesome 5 Free";
 	    position: absolute;
 	    top: 41%;
-	    right: -0.6%;
 	    width: 35px;
 	    height: 38px;
 	    text-align: left;
