@@ -1,4 +1,4 @@
-@media (max-width: 991.98px) {
+@media (max-width: 991.98px){
 
 	/*Global*/
 	.sections-detail {
@@ -18,6 +18,20 @@
 	.crochet-creations .best-class-club .detail-col-club {
 		padding-right: 15px;
 	}
+	/*Titled Photos Sections*/
+	.crochet-creations .service-section .bodyMobile {
+		position: inherit;
+		left: -225px;
+		width: 100%;
+		height: 100%;
+		background-color: #ffff;
+		font-family: 'Open Sans', sans-serif;
+		color: #555;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
 
 	/*Footer*/
 	.crochet-creations .footer .copyright,
@@ -30,6 +44,26 @@
 	.crochet-creations .banner .top-bar,
 	.crochet-creations .banner .top-bar-right {
 		text-align: center;
+	}
+	/*Titled Photos Sections*/
+	.crochet-creations .service-section .body {
+		position: inherit;
+		left: -225px;
+		width: 100%;
+		height: 100%;
+		background-color: #ffff;
+		font-family: 'Open Sans', sans-serif;
+		color: #555;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+	.crochet-creations .service-section .body .portrait-images {
+		display: block;
+	}
+	.crochet-creations .service-section .body .landscape-images{
+		display: none;
 	}
 	/*Footer*/
 	.crochet-creations .contact-section .appointment 
@@ -51,4 +85,15 @@
 	    transform: translate(-50%, -50%);
 	}
 
+}
+
+@media (min-width: 768px) {
+	/*Titled Photos*/
+	.crochet-creations .service-section .body .portrait-images {
+		display: none;
+	}
+
+	.crochet-creations .service-section .body .landscape-images {
+		display: block;
+	}
 }

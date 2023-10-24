@@ -220,7 +220,24 @@ a {
 	max-width: 90px;
 	height: auto;
 }
-
+/*Titled Photos Sections*/
+.crochet-creations .service-section .body {
+	position: relative;
+	left: -529px;
+	width: 1920px;
+	height: 100%;
+	background-color: #ffff;
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: normal;
+	text-align: center;
+}
+.crochet-creations .service-section .body .landscape-images {
+	position: relative;
+	left: 254px;
+}
 /*Footer*/
 .crochet-creations .footer .copyright {
 	padding: 50px 15px;
