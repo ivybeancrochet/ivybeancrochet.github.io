@@ -33,8 +33,7 @@ a {
 	max-width: 1920px;
 	width: 100%;
 	height: auto;
-	margin: 0 auto;
-	overflow: hidden;	
+	margin: 0 auto;	
 }
 .inside-container {
 	max-width: 940px;
@@ -180,14 +179,14 @@ a {
 /*Amigurumi of the Month*/
 
 .crochet-creations .service-section {
-	padding: 62px 15px;
+	padding: 62px 0px;
 }
 
 /*Titled Photos Sections*/
 
 .crochet-creations .service-section .body {
 	position: relative;
-	left: -529px;
+	left: -518px;
 	width: 1920px;
 	height: 100%;
 	background-color: #ffff;
