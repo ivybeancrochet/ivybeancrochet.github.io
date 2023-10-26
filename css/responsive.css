@@ -113,9 +113,9 @@
 	.item img {
 		display: inline-block;
 		text-align: center;
-		height: 350px;
+		height: 240px;
 		width: auto;
-		padding: 10px 20px;
+		padding: 10px 5px;
 	}
 
 }
