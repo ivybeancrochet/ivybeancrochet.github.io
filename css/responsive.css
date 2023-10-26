@@ -19,33 +19,6 @@
 		padding-right: 15px;
 	}
 	/*Titled Photos Sections*/
-	.crochet-creations .service-section .bodyMobile {
-		position: inherit;
-		left: -225px;
-		width: 100%;
-		height: 100%;
-		background-color: #ffff;
-		font-family: 'Open Sans', sans-serif;
-		color: #555;
-		font-size: 18px;
-		line-height: 30px;
-		font-weight: normal;
-		text-align: center;
-	}
-
-	/*Footer*/
-	.crochet-creations .footer .copyright,
-	.crochet-creations .footer .copyright .social {
-		text-align: center;
-	}
-}
-@media (max-width: 767.98px)  { 
-	/*Banner*/
-	.crochet-creations .banner .top-bar,
-	.crochet-creations .banner .top-bar-right {
-		text-align: center;
-	}
-	/*Titled Photos Sections*/
 	.crochet-creations .service-section .body {
 		position: inherit;
 		left: -225px;
@@ -59,12 +32,52 @@
 		font-weight: normal;
 		text-align: center;
 	}
+	/*Footer*/
+	.crochet-creations .footer .copyright,
+	.crochet-creations .footer .copyright .social {
+		text-align: center;
+	}
+}
+@media (max-width: 767.98px)  { 
+	/*Banner*/
+	.crochet-creations .banner .top-bar,
+	.crochet-creations .banner .top-bar-right {
+		text-align: center;
+	}
+	/*Amigurumi of the Month*/
+	.crochet-creations .amigurumi {
+		height: 425px;
+	}
+
+	/*Titled Photos Sections*/
+	.crochet-creations .service-section .body {
+		position: relative;
+		left: 0px;
+		width: 100vw;
+		height: 100%;
+		background-color: #ffff;
+		font-family: 'Open Sans', sans-serif;
+		color: #555;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+	.item img{
+		display: inline-block;
+		text-align: center;
+		height: 350px;
+		width: auto;
+		padding: 10px 20px;
+	}
+
 	.crochet-creations .service-section .body .portrait-images{
 		display: block;
 	}
 	.crochet-creations .service-section .body .landscape-images{
 		display: none;
 	}
+
 	/*Footer*/
 	.crochet-creations .contact-section .appointment 
 	.appointment-form .box-select::before {
@@ -84,9 +97,10 @@
 	    transform: translate(-50%, -50%);
 	}
 
+
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	/*Titled Photos*/
 	.crochet-creations .service-section .body .portrait-images {
 		display: none;
