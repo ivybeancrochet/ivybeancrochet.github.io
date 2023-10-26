@@ -100,7 +100,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	/*Titled Photos Section*/
 	.crochet-creations .service-section .body {
 		position: relative;
