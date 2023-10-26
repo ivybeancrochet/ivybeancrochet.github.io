@@ -71,12 +71,6 @@
 		padding: 10px 20px;
 	}
 
-	.crochet-creations .service-section .body .portrait-images{
-		display: block;
-	}
-	.crochet-creations .service-section .body .landscape-images{
-		display: none;
-	}
 
 	/*Footer*/
 	.crochet-creations .contact-section .appointment 
@@ -100,7 +94,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	/*Titled Photos Section*/
 	.crochet-creations .service-section .body {
 		position: relative;
@@ -124,11 +118,4 @@
 		padding: 10px 20px;
 	}
 
-	.crochet-creations .service-section .body .portrait-images {
-		display: block;
-	}
-
-	.crochet-creations .service-section .body .landscape-images {
-		display: none;
-	}
 }

@@ -158,22 +158,41 @@ a {
 	margin-bottom: 51px;
 	width: 97%;
 }
-.crochet-creations .banner .banner-content a.banner-btn {
+/*Banner Buttons*/
+/*Gallery*/
+.crochet-creations .banner .banner-content a.banner-btn-gallery {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 20px;
 	line-height: 25px;
 	letter-spacing: 0.6px;
 	font-weight: 700;
 	padding: 21px 32px 19px;
-/*Banner Button*/
 	background-color: #294A8C;
 	color: #fff;
 	border-radius: 3px;
 	text-transform: uppercase;
 }
-.crochet-creations .banner .banner-content a.banner-btn:hover {
+.crochet-creations .banner .banner-content a.banner-btn-gallery:hover {
 	text-decoration: none;
-	color: #26251B;
+	color: #7293b4;
+}
+/*About*/
+.crochet-creations .banner .banner-content a.banner-btn-about {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.6px;
+	font-weight: 700;
+	padding: 21px 32px 19px;
+	background-color: #7293b4;
+	color: #fff;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+.crochet-creations .banner .banner-content a.banner-btn-about:hover {
+	text-decoration: none;
+	color: #294A8C;
 }
 
 /*Amigurumi of the Month*/
