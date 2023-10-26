@@ -49,7 +49,7 @@
 		height: 425px;
 	}
 
-	/*Titled Photos Sections*/
+	/*Titled Photos Section*/
 	.crochet-creations .service-section .body {
 		position: relative;
 		left: 0px;
@@ -101,12 +101,34 @@
 }
 
 @media (max-width: 768px) {
-	/*Titled Photos*/
+	/*Titled Photos Section*/
+	.crochet-creations .service-section .body {
+		position: relative;
+		left: 0px;
+		width: 100vw;
+		height: 100%;
+		background-color: #ffff;
+		font-family: 'Open Sans', sans-serif;
+		color: #555;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	.item img {
+		display: inline-block;
+		text-align: center;
+		height: 350px;
+		width: auto;
+		padding: 10px 20px;
+	}
+
 	.crochet-creations .service-section .body .portrait-images {
-		display: none;
+		display: block;
 	}
 
 	.crochet-creations .service-section .body .landscape-images {
-		display: block;
+		display: none;
 	}
 }
