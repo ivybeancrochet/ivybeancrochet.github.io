@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: normal;
+    text-align: left;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6, p, ul, li, a, span {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+}
+
+.main-container {
+    max-width: 100vw;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.inside-container {
+    max-width: 940px;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sections-detail {
+    margin: 0 0 55px;
+}
+
+.section-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0.84px;
+    font-weight: 700;
+    color: #7b6cd5;
+    text-align: center;
+}
+
+.section-title-desc {
+    font-size: 15px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+    color: #666;
+    text-align: center;
+}
+/*Banner*/
+.crochet-creations .banner {
+    background-image: url(../img/aboutGalleryBG.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    position: relative;
+}
+
+.crochet-creations .banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    background-color: rgba(0,0,0,.5);
+    z-index: 2;
+}
+
+.crochet-creations .banner .top-bar {
+    padding: 26px 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.crochet-creations .banner .top-bar-left {
+    z-index: 3;
+}
+
+.top-bar-right {
+    padding-top: 24px;
+    z-index: 3;
+}
+
+.crochet-creations .banner .top-bar-left a {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    vertical-align: middle
+}
+
+.crochet-creations .banner .logo {
+    text-align: center;
+    z-index: 3;
+}
+
+.crochet-creations .banner .top-bar-right {
+    text-align: right;
+}
+
+.crochet-creations .banner .top-bar-right a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    font-weight: 400;
+    vertical-align: middle
+}
+
+.crochet-creations .banner .top-bar-left a:hover,
+.crochet-creations .banner .top-bar-right a:hover {
+    color: #7293b4;
+    text-decoration: none;
+}
+
+.crochet-creations .banner .top-bar-left i,
+.top-bar-right i {
+    font-size: 16px;
+    background-color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    color: #3e2d40;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.crochet-creations .banner .banner-content {
+    padding: 126px 15px;
+}
+
+
+/*About*/
+.crochet-creations .banner .banner-content a.banner-btn-about {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    padding: 21px 32px 19px;
+    background-color: #7293b4;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.crochet-creations .banner .banner-content a.banner-btn-about:hover {
+    text-decoration: none;
+    color: #294A8C;
+}
+
+/*About Section*/
+
+.section-title-desc {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    left: -500px;
+    padding: 0px;
+    width: 100vw;
+    height: 10px;
+    color: #ffff;
+}
+.title-desc-img {
+    position: relative;
+    top: -55px;
+    left: -500px;
+    height: 550px;
+}
+.title-desc-img1 {
+    position: relative;
+    top: -614px;
+    left: 960px;
+    height: 550px;
+}
+/*Footer*/
+.crochet-creations .footer .copyright {
+    padding: 50px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 99.6vw;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.crochet-creations .footer .copyright .email {
+    color: #fff;
+}
+
+.crochet-creations .footer .copyright .email-logo {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    vertical-align: middle;
+}

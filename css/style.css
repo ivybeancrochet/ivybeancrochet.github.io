@@ -198,11 +198,14 @@ a {
 /*Amigurumi of the Month*/
 
 .crochet-creations .service-section {
+	align-content: center;
 	padding: 30px 0px;
 }
 
-/*Titled Photos Sections*/
+/*Berry Bunnies collection*/
 
+
+/*Titled Photos Sections*/
 .crochet-creations .service-section .body {
 	position: relative;
 	align-content: center;
@@ -228,7 +231,7 @@ a {
 
 .crochet-creations .footer .copyright {
 	padding: 50px 15px;
-	background-color: #193c4d;
+	background-color: rgba(0, 0, 0, 0.5);
 	width: 99.6vw;
 	color: #fff;
 	font-family: inherit;
