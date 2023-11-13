@@ -176,7 +176,7 @@ a {
 	text-decoration: none;
 	color: #7293b4;
 }
-/*About*/
+/*About
 .crochet-creations .banner .banner-content a.banner-btn-about {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 20px;
@@ -188,18 +188,25 @@ a {
 	color: #fff;
 	border-radius: 3px;
 	text-transform: uppercase;
-}
+}*/
 
 .crochet-creations .banner .banner-content a.banner-btn-about:hover {
 	text-decoration: none;
 	color: #294A8C;
 }
 
-/*Amigurumi of the Month*/
+/*Monthly Amigurumis*/
+
+.crochet-creations .service-section .november {
+	position: relative;
+	left: -50%;
+	background-color: #475c2e;
+	width: 100vw;
+}
 
 .crochet-creations .service-section {
 	align-content: center;
-	padding: 30px 0px;
+	padding: 0px 0px;
 }
 
 /*Berry Bunnies collection*/

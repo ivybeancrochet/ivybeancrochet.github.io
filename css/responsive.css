@@ -11,7 +11,13 @@
 	.crochet-creations .banner .banner-content .content-col {
 		padding-left: 30px;
 	}
-	/*Amigurumi of the Month*/
+	/*Monthly Amigurumis*/
+	.crochet-creations .service-section .november {
+		position: relative;
+		left: 0%;
+		background-color: #475c2e;
+		width: 100vw;
+	}
 	.crochet-creations .service-section .service-detail > div {
 		margin-bottom: 40px;
 	}
@@ -58,7 +64,14 @@
 	.crochet-creations .banner .top-bar-right {
 		text-align: center;
 	}
-	/*Amigurumi of the Month*/
+	/*Monthly Amigurumis*/
+	.crochet-creations .service-section .november {
+		position: relative;
+		left: 0%;
+		background-color: #475c2e;
+		width: 100vw;
+	}
+
 	.crochet-creations .amigurumi {
 		height: 425px;
 	}
@@ -111,6 +124,12 @@
 }
 
 @media (max-width: 768px) {
+
+	/*Monthly Amigurumis*/
+	.crochet-creations .amigurumi {
+		height: 425px;
+	}
+
 	/*Berry Bunnies Collection*/
 
 
