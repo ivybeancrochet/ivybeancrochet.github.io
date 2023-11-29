@@ -14,9 +14,13 @@
 	/*Monthly Amigurumis*/
 	.crochet-creations .service-section .november {
 		position: relative;
-		left: 0%;
-		background-color: #475c2e;
-		width: 100vw;
+		left: -5%;
+		width: 110%;
+	}
+	.crochet-creations .service-section .october {
+		position: relative;
+		left: -5%;
+		width: 110%;
 	}
 	.crochet-creations .service-section .service-detail > div {
 		margin-bottom: 40px;
@@ -24,24 +28,13 @@
 	.crochet-creations .best-class-club .detail-col-club {
 		padding-right: 15px;
 	}
-	/*Berry Bunnies collection*/
-	.crochet-creations .service-section .berry-bunnies-body {
-		position: inherit;
-		left: -225px;
-		width: 100%;
-		height: 100%;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 18px;
-		line-height: 30px;
-		font-weight: normal;
-		text-align: center;
-	}
+
 	/*Titled Photos Sections*/
-	.crochet-creations .service-section .body {
-		position: inherit;
-		left: -225px;
-		width: 100%;
-		height: 100%;
+	.crochet-creations .inside-container .body {
+		position: relative;
+		width: 110%;
+		left: -5%;
+		height: 10%;
 		background-color: #ffff;
 		font-family: 'Open Sans', sans-serif;
 		color: #555;
@@ -67,13 +60,18 @@
 	/*Monthly Amigurumis*/
 	.crochet-creations .service-section .november {
 		position: relative;
-		left: 0%;
-		background-color: #475c2e;
+		left: -5%;
 		width: 100vw;
 	}
 
-	.crochet-creations .amigurumi {
-		height: 425px;
+	.crochet-creations .service-section .october {
+		position: relative;
+		left: -5%;
+		width: 100vw;
+	}
+
+	.crochet-creations .service-section .amigurumi {
+		height: 340px;
 	}
 	/*Berry Bunnies collection*/
 
@@ -81,7 +79,7 @@
 	/*Titled Photos Section*/
 	.crochet-creations .service-section .body {
 		position: relative;
-		left: 0px;
+		left: -5%;
 		width: 100vw;
 		height: 100%;
 		background-color: #ffff;
@@ -130,14 +128,26 @@
 		height: 425px;
 	}
 
+	.crochet-creations .service-section .november {
+		position: relative;
+		left: -5%;
+		width: 110%;
+	}
+
+	.crochet-creations .service-section .october {
+		position: relative;
+		left: -5%;
+		width: 110%;
+	}
+
 	/*Berry Bunnies Collection*/
 
 
 	/*Titled Photos Section*/
-	.crochet-creations .service-section .body {
+	.crochet-creations .inside-container .body {
 		position: relative;
-		left: 0px;
-		width: 100vw;
+		left: -5%;
+		width: 110%;
 		height: 100%;
 		background-color: #ffff;
 		font-family: 'Open Sans', sans-serif;
@@ -157,3 +167,4 @@
 	}
 
 }
+

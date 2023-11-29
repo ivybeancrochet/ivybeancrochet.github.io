@@ -3,15 +3,18 @@
 	padding: 0;
 }
 body {
-	width: 100%;
-	height: auto;
-	background-color: #d88668;
+	width: auto;
+	height: 100%;
+	background-color: #475c2e;
+	margin: 0px;
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
 	font-size: 15px;
 	line-height: 30px;
 	font-weight: normal;
 	text-align: left;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 h1,h2,h3,
@@ -176,19 +179,6 @@ a {
 	text-decoration: none;
 	color: #7293b4;
 }
-/*About
-.crochet-creations .banner .banner-content a.banner-btn-about {
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 20px;
-	line-height: 25px;
-	letter-spacing: 0.6px;
-	font-weight: 700;
-	padding: 21px 32px 19px;
-	background-color: #7293b4;
-	color: #fff;
-	border-radius: 3px;
-	text-transform: uppercase;
-}*/
 
 .crochet-creations .banner .banner-content a.banner-btn-about:hover {
 	text-decoration: none;
@@ -197,26 +187,34 @@ a {
 
 /*Monthly Amigurumis*/
 
-.crochet-creations .service-section .november {
-	position: relative;
-	left: -50%;
-	background-color: #475c2e;
-	width: 100vw;
-}
-
-.crochet-creations .service-section {
+.crochet-creations .service-section .service-detail {
 	align-content: center;
 	padding: 0px 0px;
 }
 
-/*Berry Bunnies collection*/
-
-
-/*Titled Photos Sections*/
-.crochet-creations .service-section .body {
+.crochet-creations .service-section .november {
 	position: relative;
 	align-content: center;
-	left: -50%;
+	left: -55%;
+	width: 100vw;
+	padding: 0px 0px;
+	background-color: #475c2e;
+}
+
+.crochet-creations .service-section .october {
+	position: relative;
+	align-content: center;
+	left: -55%;
+	width: 100vw;
+	padding: 0px 0px;
+	background-color: #d88668;
+}
+
+/*Titled Photos Sections*/
+.crochet-creations .inside-container .body {
+	position: relative;
+	align-content: center;
+	left: -55%;
 	width: 100vw;
 	height: 100%;
 	background-color: #ffff;

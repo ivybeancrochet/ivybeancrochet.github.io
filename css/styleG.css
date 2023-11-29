@@ -85,7 +85,7 @@ a {
 
 .crochet-creations .banner .banner-overlay {
     position: absolute;
-    top: 0;
+    top: 50px;
     width: 100%;
     height: 100%;
     max-width: 1920px;
@@ -200,59 +200,39 @@ a {
     text-decoration: none;
     color: #26251B;
 }
-/*Amigurumi of the Month*/
+/*Gallery Images*/
 
 .crochet-creations .service-section {
-    padding: 62px 15px;
+    padding: 62px 0px;
 }
 
-.crochet-creations .service-section .hiddden {
-    opacity: 0;
-    transition: all 1s;
-}
 
-.crochet-creations .service-section .show {
-    opacity: 1;
-}
-
-.crochet-creations .service-section .service-detail {
-    text-align: center;
-}
-
-.crochet-creations .service-section .amigurumi {
-}
-
-.crochet-creations .service-section .service-detail a:hover {
-    text-decoration: none;
-}
-
-.crochet-creations .service-section .service-detail a:hover .service-title {
-    text-decoration: none;
-    color: #fe86d4;
-}
-
-.crochet-creations .service-section .service-title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 25px;
-    line-height: 40px;
-    font-weight: 700;
-    letter-spacing: 0.75px;
-    color: #000;
-    margin-bottom: 15px;
-}
-
-.crochet-creations .service-section .service-desc {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 25px;
-    font-weight: 400;
-    letter-spacing: 0.40px;
-}
-
-.crochet-creations .service-section .service-detail-img {
-    max-width: 90px;
+.crochet-creations .service-section .gallery-imgs {
+    position: relative;
+    padding: 0px 0px;
+    left: -50%;
+    width: 100vw;
     height: auto;
+
 }
+
+.crochet-creations .service-section .gallery-imgs .img {
+    height: 580px;
+    width: 465px;
+    border: solid;
+    border-width: 15px;
+    border-color: white;
+}
+
+.crochet-creations .service-section .gallery-imgs .big-img {
+    position: relative;
+    height: 800px;
+    border: solid;
+    left: 17%;
+    border-width: 15px;
+    border-color: white;
+}
+
 /*Footer*/
 .crochet-creations .footer .copyright {
     padding: 50px 15px;
