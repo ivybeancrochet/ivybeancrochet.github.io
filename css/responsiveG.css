@@ -108,7 +108,7 @@
 
 }
 
-@media (max-width: 365px) { /*Galaxy S/10*/
+@media (min-width: 375px) { /*iPhone 11 pro*/
 
     /*Gallery Images*/
 
@@ -122,7 +122,7 @@
 
     .crochet-creations .service-section .gallery-imgs .img {
         height: 220px;
-        width: 145px;
+        width: 170px;
         border: solid;
         border-width: 5px;
         border-color: white;
@@ -132,13 +132,43 @@
         position: relative;
         height: 425px;
         border: solid;
-        left: 2%;
+        left: 3%;
         border-width: 9px;
         border-color: white;
     }
 }
 
-@media (max-width: 815px) { /*iPad*/
+@media (min-width: 360px) { /*Galaxy S10*/
+
+    /*Gallery Images*/
+
+    .crochet-creations .service-section .gallery-imgs {
+        position: relative;
+        padding: 0px 0px;
+        left: 2%;
+        width: 100vw;
+        height: auto;
+    }
+
+    .crochet-creations .service-section .gallery-imgs .img {
+        height: 220px;
+        width: 170px;
+        border: solid;
+        border-width: 5px;
+        border-color: white;
+    }
+
+    .crochet-creations .service-section .gallery-imgs .big-img {
+        position: relative;
+        height: 425px;
+        border: solid;
+        left: 3%;
+        border-width: 9px;
+        border-color: white;
+    }
+}
+
+@media (min-width: 815px) { /*iPad*/
     /*Gallery Images*/
 
     .crochet-creations .service-section .gallery-imgs {
