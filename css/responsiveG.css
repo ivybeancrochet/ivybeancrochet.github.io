@@ -27,33 +27,6 @@
         padding-left: 30px;
     }
 
-    /*Gallery Images*/
-
-    .crochet-creations .service-section .gallery-imgs {
-        position: relative;
-        padding: 0px 0px;
-        left: 2.5%;
-        width: 100vw;
-        height: auto;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .img {
-        height: 560px;
-        width: 445px;
-        border: solid;
-        border-width: 15px;
-        border-color: white;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .big-img {
-        position: relative;
-        height: 600px;
-        border: solid;
-        left: -1.5%;
-        border-width: 15px;
-        border-color: white;
-    }
-
     /*Footer*/
     .crochet-creations .footer .copyright,
     .crochet-creations .footer .copyright .social {
@@ -61,7 +34,7 @@
     }
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 767.98px) {
     /*Banner*/
     .crochet-creations .banner .banner-overlay {
         position: absolute;
@@ -79,121 +52,8 @@
     .crochet-creations .banner .top-bar-right {
         text-align: center;
     }
-    /*Gallery Images*/
 
-    .crochet-creations .service-section .gallery-imgs {
-        position: relative;
-        padding: 0px 0px;
-        left: 0%;
-        width: 100vw;
-        height: auto;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .img {
-        height: 260px;
-        width: 185px;
-        border: solid;
-        border-width: 5px;
-        border-color: white;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .big-img {
-        position: relative;
-        height: 425px;
-        border: solid;
-        left: 6.75%;
-        border-width: 8px;
-        border-color: white;
-    }
 
 }
 
-@media (min-width: 375px) { /*iPhone 11 pro*/
-
-    /*Gallery Images*/
-
-    .crochet-creations .service-section .gallery-imgs {
-        position: relative;
-        padding: 0px 0px;
-        left: 3%;
-        width: 100vw;
-        height: auto;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .img {
-        height: 220px;
-        width: 170px;
-        border: solid;
-        border-width: 5px;
-        border-color: white;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .big-img {
-        position: relative;
-        height: 425px;
-        border: solid;
-        left: 3%;
-        border-width: 9px;
-        border-color: white;
-    }
-}
-
-@media (min-width: 360px) { /*Galaxy S10*/
-
-    /*Gallery Images*/
-
-    .crochet-creations .service-section .gallery-imgs {
-        position: relative;
-        padding: 0px 0px;
-        left: 2%;
-        width: 100vw;
-        height: auto;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .img {
-        height: 220px;
-        width: 170px;
-        border: solid;
-        border-width: 5px;
-        border-color: white;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .big-img {
-        position: relative;
-        height: 425px;
-        border: solid;
-        left: 3%;
-        border-width: 9px;
-        border-color: white;
-    }
-}
-
-@media (min-width: 815px) { /*iPad*/
-    /*Gallery Images*/
-
-    .crochet-creations .service-section .gallery-imgs {
-        position: relative;
-        padding: 0px 0px;
-        left: 3%;
-        width: 100vw;
-        height: auto;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .img {
-        height: 260px;
-        width: 187px;
-        border: solid;
-        border-width: 8px;
-        border-color: white;
-    }
-
-    .crochet-creations .service-section .gallery-imgs .big-img {
-        position: relative;
-        height: 425px;
-        border: solid;
-        left: 6.5%;
-        border-width: 10px;
-        border-color: white;
-    }
-}
 
