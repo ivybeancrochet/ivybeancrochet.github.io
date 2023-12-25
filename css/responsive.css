@@ -11,7 +11,15 @@
 	.crochet-creations .banner .banner-content .content-col {
 		padding-left: 30px;
 	}
+
 	/*Monthly Amigurumis*/
+
+	.crochet-creations .service-section .december {
+		position: relative;
+		left: -5%;
+		width: 110%;
+	}
+
 	.crochet-creations .service-section .november {
 		position: relative;
 		left: -5%;
@@ -43,6 +51,68 @@
 		font-weight: normal;
 		text-align: center;
 	}
+
+	/*Footer*/
+	.crochet-creations .footer .copyright,
+	.crochet-creations .footer .copyright .social {
+		text-align: center;
+	}
+}
+
+@media (max-width: 1278px){
+
+	/*Global*/
+	.sections-detail {
+		margin: 0 0 30px;
+	}
+	/*Banner*/
+	.crochet-creations .banner .top-bar-left a {
+		font-size: 17px;
+	}
+	.crochet-creations .banner .banner-content .content-col {
+		padding-left: 30px;
+	}
+
+	/*Monthly Amigurumis*/
+
+	.crochet-creations .service-section .december {
+		position: relative;
+		left: -25%;
+		width: 150%;
+	}
+
+	.crochet-creations .service-section .november {
+		position: relative;
+		left: -25%;
+		width: 150%;
+	}
+	.crochet-creations .service-section .october {
+		position: relative;
+		left: -25%;
+		width: 150%;
+	}
+	.crochet-creations .service-section .service-detail > div {
+		margin-bottom: 40px;
+	}
+	.crochet-creations .best-class-club .detail-col-club {
+		padding-right: 15px;
+	}
+
+	/*Titled Photos Sections*/
+	.crochet-creations .inside-container .body {
+		position: relative;
+		width: 150%;
+		left: -25%;
+		height: 10%;
+		background-color: #ffff;
+		font-family: 'Open Sans', sans-serif;
+		color: #555;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+
 	/*Footer*/
 	.crochet-creations .footer .copyright,
 	.crochet-creations .footer .copyright .social {
@@ -57,7 +127,15 @@
 	.crochet-creations .banner .top-bar-right {
 		text-align: center;
 	}
+
 	/*Monthly Amigurumis*/
+
+	.crochet-creations .service-section .december {
+		position: relative;
+		left: -5%;
+		width: 100vw;
+	}
+
 	.crochet-creations .service-section .november {
 		position: relative;
 		left: -5%;
@@ -126,6 +204,12 @@
 	/*Monthly Amigurumis*/
 	.crochet-creations .amigurumi {
 		height: 425px;
+	}
+
+	.crochet-creations .service-section .december {
+		position: relative;
+		left: -5%;
+		width: 110%;
 	}
 
 	.crochet-creations .service-section .november {

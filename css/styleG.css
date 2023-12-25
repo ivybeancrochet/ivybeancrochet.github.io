@@ -220,13 +220,15 @@ a {
     border-color: white;
     border-width: 5px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
+/*
 .crochet-creations .service-section .gallery img:hover {
     transform: scale(1.1);
 }
+*/
 
 /*Footer*/
 .crochet-creations .footer .copyright {

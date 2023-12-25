@@ -5,7 +5,7 @@
 body {
 	width: auto;
 	height: 100%;
-	background-color: #475c2e;
+	background-color: rgb(168, 55, 55);
 	margin: 0px;
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
@@ -139,9 +139,8 @@ a {
 .crochet-creations .banner .banner-content {
 	padding: 126px 15px;
 }
-.crochet-creations .banner .banner-content .hidden{
 
-}
+
 .crochet-creations .banner .banner-content .content-col {
 	text-align: center;
 	z-index: 3;
@@ -192,6 +191,15 @@ a {
 	padding: 0px 0px;
 }
 
+.crochet-creations .service-section .december {
+	position: relative;
+	align-content: center;
+	left: -55%;
+	width: 100vw;
+	padding: 0px 0px;
+	background-color: rgb(168, 55, 55);
+}
+
 .crochet-creations .service-section .november {
 	position: relative;
 	align-content: center;
@@ -227,9 +235,17 @@ a {
 }
 
 .item {
+	border: solid;
+	border-color: white;
+	border-width: 5px;
+	border-radius: 8px;
 	display: inline-block;
 	text-align: center;
 	padding: 10px 20px;
+}
+
+.border-rad {
+	border-radius: 10px;
 }
 
 /*Footer*/
