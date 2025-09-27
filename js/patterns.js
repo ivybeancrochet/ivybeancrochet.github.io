@@ -141,7 +141,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       const placeholders = [
-        "assets/images/place_holder1.jpg",
         "assets/images/place_holder2.jpeg",
       ];
 
