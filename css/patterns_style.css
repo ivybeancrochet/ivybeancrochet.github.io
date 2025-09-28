@@ -323,10 +323,13 @@ img, #title {
     }
 
     .page-counter {
-        top: 20%;
+        top: 15%;
     }
     .arrow {
         top: 50%;
+        background-color: #00000000;
+    }
+    .arrow:hover {
         background-color: #00000000;
     }
     .arrow-left {
@@ -359,7 +362,8 @@ img, #title {
     }
 
     .footer-container {
-        padding: 30px;
+        padding-top: 30px;
+        height: 80px;
     }
     
     /*===+++===*/
