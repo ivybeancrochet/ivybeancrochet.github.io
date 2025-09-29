@@ -153,24 +153,6 @@ img, #title {
     overflow: hidden;
 }
 
-.watermarked-img::after {
-    content: "©ivybeancrochet";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    pointer-events: none;
-    transform: rotate(-20deg);
-    transform-origin: center;
-    font-size: 40px;
-    color: rgba(255,255,255,0.15);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .page-counter {
     position: fixed;
     top: 10px;
