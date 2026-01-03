@@ -38,6 +38,12 @@ footer {
     padding: 25px;
     padding-bottom: 80px;
     background-color: var(--dark-green);
+    opacity: 0;
+    animation: fadeIn 0.5s ease 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 img, #title {
