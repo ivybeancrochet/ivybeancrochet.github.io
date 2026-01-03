@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
+
+  <link rel="icon" href="assets/icons/bear_x128.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/index_style.css">
+  <link rel="stylesheet" href="css/debug_style.css">
+
+  <script src="js/index.js" defer></script>
+
+  <title>Ivy Bean Crochet</title>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div id="title">
+    <div class="title-buttons">
+      <button id="bell">
+        <i class="fa-solid fa-bell"></i>
+      </button>
+      <button id="shopping-bag">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </button>
+    </div>
+    <h1 id="title-curved">
+      <svg id="curve-svg" viewBox="0 0 400 150" role="img" aria-label="Ivy Bean Crochet">
+        <path id="curve" fill="transparent" d="M 0 100 Q 200 0 380 100" />
+        <text id="svg-heading">
+          <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            ✿ Ivy Bean Crochet ✿
+          </textPath>
+        </text>
+      </svg>
+    </h1>
+    <div id="title-bear">
+      <div id="bear-animated">
+        <img id="bear-base" src="assets/icons/bear_base_x300.png" />
+        <img id="bear-eyes" src="assets/icons/bear_eyes_x300.png" />
+        <img id="bear-nose" src="assets/icons/bear_nose_x300.png" />
+      </div>
+    </div>
+  </div>
+
+  <h1 id="subheader"><i class="fa-brands fa-canadian-maple-leaf"></i> Handmade in Canada <i class="fa-brands fa-canadian-maple-leaf"></i></h1>
+
+  <div class="columns-top">
+    <div id="merch">
+      <div class="hide-blur"></div>
+      <h1 class="coming-soon">Coming<br>Soon</h1>
+      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+      <h1 class="cube-headers">Sticker Merch</h1>
+      <img class="stickers" id="bear-sticker" src="assets/icons/bear_sticker_x150.png" alt="Bear sticker" />
+    </div>
+    <button id="patterns" onclick="window.location.href='patterns.html'" >
+      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+      <h1 class="cube-headers">Free Patterns</h1>
+      <img class="stickers" id="bear-reading" src="assets/icons/bear_reading_x150.png" alt="Bear reading" />
+    </button>
+    <div id="plushies">
+      <div class="hide-blur"></div>
+      <h1 class="coming-soon">Coming<br>Soon</h1>
+      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+      <h1 class="cube-headers">Shop Amigurumis</h1>
+      <img class="stickers" id="bear-standing" src="assets/icons/bear_body_x150.png" alt="Bear standing" />
+    </div>
+  </div>
+  <div class="row-bottom">
+    <div id="amazon-links">
+      <div class="hide-blur"></div>
+      <h1 class="coming-soon">Coming<br>Soon</h1>
+      <h1 class="cube-headers">Amazon Links</h1>
+      <img class="stickers" src="assets/icons/bear_base_x300.png" alt="Bear sticker" />
+    </div>
+  </div>
+
+
+  <div id="checkout-container">
+    <div id="paypal-button-container"></div>
+    <p id="result-message"></p>
+  </div>
+
+  <footer class="footer-container">
+    <h1 id="footer-title">Ivy Bean Crochet</h1>
+    <a class="footer-links" href="https://www.instagram.com/ivybeancrochet/" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <div class="spacer"></div>
+    <a id="credits" href="https://github.com/uwkx" target="_blank" rel="noopener noreferrer"><h1>made by uwkx</h1></a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=ARfO5UWBV0lDQ1jcnwnPPyHzmoR3nPW5RNN93I1Z7jEKYk7m93WatQ1j4gN_AIC4LXslwRIU2iPX3Qub&currency=CAD&components=buttons"></script>
+
+  <script>
+    paypal.Buttons({
+      style: {
+        shape: "rect",
+        layout: "vertical",
+        color: "gold",
+        label: "paypal"
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: '25.00', currency_code: 'CAD' }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          document.getElementById('result-message').innerHTML =
+            `✅ Transaction completed by ${details.payer.name.given_name}`;
+        });
+      },
+      onError: function(err) {
+        console.error(err);
+        document.getElementById('result-message').innerHTML =
+          "⚠️ Something went very wrong. Please try again.";
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>
