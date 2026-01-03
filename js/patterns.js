@@ -91,8 +91,10 @@ const assetGallery = (() => {
 
   const renderAssets = (assets) => {
     container.innerHTML = '';
-    assets.photos.forEach((photoFile) => {
-      const baseName = getBaseName(photoFile);
+    assets.photos
+      .filter(f => f.toLowerCase().endsWith('.webp'))
+      .forEach((photoFile) => {
+        const baseName = getBaseName(photoFile);
       const item = document.createElement('div');
       item.className = 'asset-item';
 
@@ -121,7 +123,9 @@ const assetGallery = (() => {
       };
 
       const openGroupPopup = () => {
-        currentGroup = assets.patterns.filter(p => getBaseName(p) === baseName);
+        currentGroup = assets.patterns
+          .filter(p => getBaseName(p) === baseName)
+          .filter(p => p.toLowerCase().endsWith('.webp'));
         openPopup();
       };
 
