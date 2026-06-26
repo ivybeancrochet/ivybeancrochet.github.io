@@ -13,7 +13,6 @@ if (!cloudName || !apiKey || !apiSecret) {
 }
 
 const repoRoot = path.resolve(__dirname, '..');
-const outputPath = path.join(repoRoot, 'collections.json');
 
 function requestJson(url, headers) {
   return new Promise((resolve, reject) => {
@@ -88,8 +87,7 @@ async function main() {
     .filter((entry) => entry.version)
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  await fs.writeFile(outputPath, `${JSON.stringify(collections, null, 2)}\n`);
-  console.log(`Wrote ${collections.length} collection entries to ${path.relative(repoRoot, outputPath)}`);
+  console.log(`Discovered ${collections.length} collection entries. The site now uses the built-in collection list instead of collections.json.`);
 }
 
 main().catch((error) => {

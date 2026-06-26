@@ -1,6 +1,10 @@
 const assetGallery = (() => {
   const CLOUDINARY_BASE = 'https://res.cloudinary.com/tukkejod/image/upload';
-  let COLLECTIONS = [];
+  const COLLECTIONS = [
+    { name: 'Mini_Miffy', version: 'v1782443528' },
+    { name: 'Berry_Bears', version: 'v1782442952' },
+    { name: 'Farm_Birds', version: 'v1782445545' }
+  ];
 
   const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
   const THUMBNAIL_WIDTH = 320;
@@ -226,9 +230,6 @@ const assetGallery = (() => {
     registerZoomBlockers();
 
     try {
-      const response = await fetch('/collections.json');
-      COLLECTIONS = await response.json();
-
       const initialCollections = COLLECTIONS.map(({ name, version }) => ({ name, version, images: [] }));
       renderAssets(initialCollections);
 
