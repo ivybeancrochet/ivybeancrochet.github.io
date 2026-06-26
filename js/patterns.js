@@ -1,10 +1,6 @@
 const assetGallery = (() => {
   const CLOUDINARY_BASE = 'https://res.cloudinary.com/tukkejod/image/upload';
-  const COLLECTIONS = [
-    { name: 'Mini_Miffy', version: 'v1782443528' },
-    { name: 'Berry_Bears', version: 'v1782442952' },
-    { name: 'Farm_Birds', version: 'v1782445545' }
-  ];
+  let COLLECTIONS = [];
 
   const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
   const THUMBNAIL_WIDTH = 320;
@@ -154,6 +150,29 @@ const assetGallery = (() => {
       .map((img) => img.url);
   };
 
+  const loadCollections = async () => {
+    try {
+      const response = await fetch('/collections.json', { cache: 'no-store' });
+      if (!response.ok) {
+        throw new Error(`Could not load collections.json: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        return data;
+      }
+
+      if (Array.isArray(data.collections)) {
+        return data.collections;
+      }
+
+      return [];
+    } catch (error) {
+      console.error('Error loading collections:', error);
+      return [];
+    }
+  };
+
   const discoverAllAssets = async () => {
     const discoveryPromises = COLLECTIONS.map((collection) =>
       discoverCollectionImages(collection).then((images) => ({
@@ -230,8 +249,12 @@ const assetGallery = (() => {
     registerZoomBlockers();
 
     try {
-      const initialCollections = COLLECTIONS.map(({ name, version }) => ({ name, version, images: [] }));
-      renderAssets(initialCollections);
+      COLLECTIONS = await loadCollections();
+
+      if (!COLLECTIONS.length) {
+        console.warn('No collections available.');
+        return;
+      }
 
       const collections = await discoverAllAssets();
       renderAssets(collections);
