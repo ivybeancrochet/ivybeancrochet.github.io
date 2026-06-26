@@ -35,15 +35,14 @@ h1 {
 
 footer {
     position: relative;
-    padding: 25px;
-    padding-bottom: 80px;
+    padding: 25px 25px 80px;
     background-color: var(--dark-green);
     opacity: 0;
-    animation: fadeIn 0.5s ease 0.5s forwards;
+    transition: opacity 0.5s ease 0.5s;
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
+footer.loaded {
+    opacity: 1;
 }
 
 img, #title {

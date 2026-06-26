@@ -1,9 +1,16 @@
 const assetGallery = (() => {
+  const CLOUDINARY_BASE = 'https://res.cloudinary.com/tukkejod/image/upload';
+  let COLLECTIONS = [];
+
   const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+  const THUMBNAIL_WIDTH = 320;
+  const IMAGE_PROBE_TIMEOUT_MS = 900;
+  const IMAGE_PROBE_BATCH_SIZE = 4;
+  const MAX_IMAGE_CHECKS = 24;
+  const MAX_MISSING_IN_A_ROW = 4;
 
   const root = document.documentElement;
   const container = document.getElementById('assets-container');
-  const loadingOverlay = document.getElementById('loading-overlay');
   const backgroundDiv = document.createElement('div');
   const patternImg = document.createElement('img');
   const arrowLeft = document.createElement('div');
@@ -56,12 +63,13 @@ const assetGallery = (() => {
     document.addEventListener('keydown', preventZoom);
   };
 
-  const getBaseName = (filename) => {
-    const name = filename
-      .substring(filename.lastIndexOf('/') + 1, filename.lastIndexOf('.'))
-      .replace(/\d+$/, '')
-      .trim();
-    return name;
+  const getBaseName = (collectionName) => {
+    // Convert snake_case to Title Case (e.g., Mini_Miffy -> Mini Miffy, brown_bears -> Brown Bears)
+    return collectionName
+      .replace(/_/g, ' ')
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
   };
 
   let currentGroup = [];
@@ -70,7 +78,7 @@ const assetGallery = (() => {
   const openPopup = (index = 0) => {
     if (!currentGroup.length) return;
     currentIndex = index;
-    patternImg.src = `https://raw.githubusercontent.com/ivybeancrochet/asset-library/main/${currentGroup[currentIndex]}`;
+    patternImg.src = currentGroup[currentIndex];
     imageCounter.textContent = `${currentIndex + 1} / ${currentGroup.length}`;
     showPopup();
   };
@@ -89,43 +97,107 @@ const assetGallery = (() => {
     });
   };
 
-  const renderAssets = (assets) => {
+  const buildCollectionImageUrl = (collection, number = 0) => {
+    const suffix = number === 0 ? '' : `-${number}`;
+    return `${CLOUDINARY_BASE}/${collection.version}/pat/${collection.name}${suffix}.jpg`;
+  };
+
+  const buildThumbnailUrl = (url) => url.replace('/upload/', `/upload/w_${THUMBNAIL_WIDTH},q_auto,f_auto/`);
+
+  const imageExists = async (url) => {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), IMAGE_PROBE_TIMEOUT_MS);
+      const res = await fetch(url, { method: 'HEAD', signal: controller.signal, cache: 'force-cache' });
+      clearTimeout(timeout);
+      return res.ok;
+    } catch {
+      return false;
+    }
+  };
+
+  const discoverCollectionImages = async (collection) => {
+    const images = [];
+    let consecutiveNotFound = 0;
+    let number = 0;
+
+    while (consecutiveNotFound < MAX_MISSING_IN_A_ROW && number <= MAX_IMAGE_CHECKS) {
+      const batchNumbers = [];
+      const batchUrls = [];
+
+      for (let i = 0; i < IMAGE_PROBE_BATCH_SIZE && number <= MAX_IMAGE_CHECKS; i++) {
+        batchNumbers.push(number);
+        batchUrls.push(buildCollectionImageUrl(collection, number));
+        number++;
+      }
+
+      const batchResults = await Promise.all(batchUrls.map((url) => imageExists(url).then((exists) => ({ exists, url }))));
+
+      batchResults.forEach(({ exists, url }, index) => {
+        const currentNumber = batchNumbers[index];
+
+        if (exists) {
+          images.push({ url, number: currentNumber });
+          consecutiveNotFound = 0;
+        } else {
+          consecutiveNotFound++;
+        }
+      });
+    }
+
+    return images
+      .sort((a, b) => a.number - b.number)
+      .map((img) => img.url);
+  };
+
+  const discoverAllAssets = async () => {
+    const discoveryPromises = COLLECTIONS.map((collection) =>
+      discoverCollectionImages(collection).then((images) => ({
+        name: collection.name,
+        version: collection.version,
+        images
+      }))
+    );
+
+    return (await Promise.all(discoveryPromises)).filter(({ images }) => images.length > 0);
+  };
+
+  const renderAssets = (collections) => {
     container.innerHTML = '';
-    assets.photos
-      .filter(f => f.toLowerCase().endsWith('.webp'))
-      .forEach((photoFile) => {
-        const baseName = getBaseName(photoFile);
+
+    collections.forEach(({ name, version, images }) => {
+      const displayName = getBaseName(name);
       const item = document.createElement('div');
       item.className = 'asset-item';
 
       const header = document.createElement('h1');
       header.className = 'pattern-headers';
-      header.textContent = baseName;
+      header.textContent = displayName;
       header.title = 'Click to view pattern';
 
       const photo = document.createElement('img');
       photo.className = 'pattern-photos';
       photo.title = 'Click to view pattern';
-      photo.style.filter = 'blur(20px)';
-      photo.style.transition = 'filter 0.5s ease, opacity 0.5s ease';
+      photo.alt = `${displayName} pattern preview`;
+      photo.loading = 'lazy';
+      photo.decoding = 'async';
+      photo.width = THUMBNAIL_WIDTH;
+      photo.height = THUMBNAIL_WIDTH;
+      photo.style.transition = 'opacity 0.5s ease';
       photo.style.opacity = '0';
 
-      const lowResUrl = `https://raw.githubusercontent.com/ivybeancrochet/asset-library/main/${photoFile}?w=20`;
-      photo.src = lowResUrl;
+      const previewImage = images[0] || buildCollectionImageUrl({ name, version }, 0);
+      const thumbnailUrl = buildThumbnailUrl(previewImage);
+      photo.src = thumbnailUrl;
       photo.onload = () => {
-        const fullRes = new Image();
-        fullRes.src = `https://raw.githubusercontent.com/ivybeancrochet/asset-library/main/${photoFile}`;
-        fullRes.onload = () => {
-          photo.src = fullRes.src;
-          photo.style.filter = 'blur(0)';
-          photo.style.opacity = '1';
-        };
+        photo.style.opacity = '1';
+      };
+      photo.onerror = () => {
+        photo.style.opacity = '0';
       };
 
       const openGroupPopup = () => {
-        currentGroup = assets.patterns
-          .filter(p => getBaseName(p) === baseName)
-          .filter(p => p.toLowerCase().endsWith('.webp'));
+        currentGroup = images;
         openPopup();
       };
 
@@ -135,33 +207,6 @@ const assetGallery = (() => {
       item.appendChild(header);
       item.appendChild(photo);
       container.appendChild(item);
-    });
-
-    const placeholders = [
-      'assets/images/place_holder2.jpeg',
-    ];
-
-    placeholders.forEach((src, index) => {
-      const placeholder = document.createElement('div');
-      placeholder.className = 'asset-item';
-      placeholder.innerHTML = `
-        <h1 class="pattern-headers">Coming Soon ${index + 1}</h1>
-        <img class="pattern-photos" src="${src}" />
-      `;
-      const blur = document.createElement('div');
-      blur.className = 'hide-blur';
-      blur.style.position = 'absolute';
-      blur.style.top = '0';
-      blur.style.left = '0';
-      blur.style.width = '100%';
-      blur.style.height = '100%';
-      blur.style.borderRadius = '50px';
-      placeholder.appendChild(blur);
-      const comingSoon = document.createElement('h1');
-      comingSoon.className = 'coming-soon';
-      comingSoon.textContent = 'Coming Soon';
-      placeholder.appendChild(comingSoon);
-      container.appendChild(placeholder);
     });
   };
 
@@ -174,22 +219,29 @@ const assetGallery = (() => {
     });
   };
 
-  const initialize = () => {
+  const initialize = async () => {
     appendPopupElements();
     registerPopupControls();
     registerImageProtectors();
     registerZoomBlockers();
-    watermarkImages();
-    loadingOverlay.style.display = 'none';
+
+    try {
+      const response = await fetch('/collections.json');
+      COLLECTIONS = await response.json();
+
+      const initialCollections = COLLECTIONS.map(({ name, version }) => ({ name, version, images: [] }));
+      renderAssets(initialCollections);
+
+      const collections = await discoverAllAssets();
+      renderAssets(collections);
+      watermarkImages();
+      document.querySelector('footer')?.classList.add('loaded');
+    } catch (error) {
+      console.error('Error loading assets:', error);
+    }
   };
 
-  return { initialize, renderAssets };
+  return { initialize };
 })();
 
-window.addEventListener('DOMContentLoaded', () => {
-  fetch('https://raw.githubusercontent.com/ivybeancrochet/asset-library/main/assets.json')
-    .then(response => response.json())
-    .then(assetGallery.renderAssets)
-    .catch(error => console.error('Error loading assets.json:', error))
-    .finally(assetGallery.initialize);
-});
+window.addEventListener('DOMContentLoaded', assetGallery.initialize);

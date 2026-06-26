@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://ivybeancrochet.ca/">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://www.paypal.com" crossorigin>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
 
   <link rel="icon" href="assets/icons/bear_x128.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/index_style.css">
-  <link rel="stylesheet" href="css/debug_style.css">
+  <link rel="stylesheet" href="/css/index_style.css">
+  <link rel="stylesheet" href="/css/debug_style.css">
 
-  <script src="js/index.js" defer></script>
+  <script src="/js/index.js" defer></script>
 
   <title>Ivy Bean Crochet</title>
 </head>
@@ -39,9 +41,9 @@
     </h1>
     <div id="title-bear">
       <div id="bear-animated">
-        <img id="bear-base" src="assets/icons/bear_base_x300.png" />
-        <img id="bear-eyes" src="assets/icons/bear_eyes_x300.png" />
-        <img id="bear-nose" src="assets/icons/bear_nose_x300.png" />
+        <img id="bear-base" src="assets/icons/bear_base_x300.png" width="300" height="300" decoding="async" />
+        <img id="bear-eyes" src="assets/icons/bear_eyes_x300.png" width="300" height="300" decoding="async" />
+        <img id="bear-nose" src="assets/icons/bear_nose_x300.png" width="300" height="300" decoding="async" />
       </div>
     </div>
   </div>
@@ -52,21 +54,21 @@
     <div id="merch">
       <div class="hide-blur"></div>
       <h1 class="coming-soon">Coming<br>Soon</h1>
-      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+      <img class="sprouts" src="assets/icons/sprout_x125.png" width="125" height="125" loading="lazy" decoding="async" />
       <h1 class="cube-headers">Sticker Merch</h1>
-      <img class="stickers" id="bear-sticker" src="assets/icons/bear_sticker_x150.png" alt="Bear sticker" />
+      <img class="stickers" id="bear-sticker" src="assets/icons/bear_sticker_x150.png" width="150" height="150" loading="lazy" decoding="async" />
     </div>
-    <button id="patterns" onclick="window.location.href='patterns.html'" >
-      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+    <button id="patterns" onclick="window.location.href='/patterns/index.html'" >
+      <img class="sprouts" src="assets/icons/sprout_x125.png"width="125" height="125" loading="lazy" decoding="async" />
       <h1 class="cube-headers">Free Patterns</h1>
-      <img class="stickers" id="bear-reading" src="assets/icons/bear_reading_x150.png" alt="Bear reading" />
+      <img class="stickers" id="bear-reading" src="assets/icons/bear_reading_x150.png" width="150" height="150" loading="lazy" decoding="async" />
     </button>
     <div id="plushies">
       <div class="hide-blur"></div>
       <h1 class="coming-soon">Coming<br>Soon</h1>
-      <img class="sprouts" src="assets/icons/sprout_x125.png" alt="Sprout" />
+      <img class="sprouts" src="assets/icons/sprout_x125.png" width="125" height="125" loading="lazy" decoding="async" />
       <h1 class="cube-headers">Shop Amigurumis</h1>
-      <img class="stickers" id="bear-standing" src="assets/icons/bear_body_x150.png" alt="Bear standing" />
+      <img class="stickers" id="bear-standing" src="assets/icons/bear_body_x150.png" width="150" height="150" loading="lazy" decoding="async" />
     </div>
   </div>
   <div class="row-bottom">
@@ -74,7 +76,7 @@
       <div class="hide-blur"></div>
       <h1 class="coming-soon">Coming<br>Soon</h1>
       <h1 class="cube-headers">Amazon Links</h1>
-      <img class="stickers" src="assets/icons/bear_base_x300.png" alt="Bear sticker" />
+      <img class="stickers" src="assets/icons/bear_base_x300.png" width="300" height="300" loading="lazy" decoding="async" />
     </div>
   </div>
 
@@ -93,37 +95,44 @@
     <a id="credits" href="https://github.com/uwkx" target="_blank" rel="noopener noreferrer"><h1>made by uwkx</h1></a>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <script src="https://www.paypal.com/sdk/js?client-id=ARfO5UWBV0lDQ1jcnwnPPyHzmoR3nPW5RNN93I1Z7jEKYk7m93WatQ1j4gN_AIC4LXslwRIU2iPX3Qub&currency=CAD&components=buttons"></script>
-
   <script>
-    paypal.Buttons({
-      style: {
-        shape: "rect",
-        layout: "vertical",
-        color: "gold",
-        label: "paypal"
-      },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            amount: { value: '25.00', currency_code: 'CAD' }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          document.getElementById('result-message').innerHTML =
-            `✅ Transaction completed by ${details.payer.name.given_name}`;
-        });
-      },
-      onError: function(err) {
-        console.error(err);
-        document.getElementById('result-message').innerHTML =
-          "⚠️ Something went very wrong. Please try again.";
-      }
-    }).render('#paypal-button-container');
+    document.addEventListener('DOMContentLoaded', () => {
+      const paypalScript = document.createElement('script');
+      paypalScript.src = 'https://www.paypal.com/sdk/js?client-id=ARfO5UWBV0lDQ1jcnwnPPyHzmoR3nPW5RNN93I1Z7jEKYk7m93WatQ1j4gN_AIC4LXslwRIU2iPX3Qub&currency=CAD&components=buttons';
+      paypalScript.async = true;
+      paypalScript.onload = () => {
+        if (typeof paypal === 'undefined') return;
+
+        paypal.Buttons({
+          style: {
+            shape: "rect",
+            layout: "vertical",
+            color: "gold",
+            label: "paypal"
+          },
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                amount: { value: '25.00', currency_code: 'CAD' }
+              }]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              document.getElementById('result-message').innerHTML =
+                `✅ Transaction completed by ${details.payer.name.given_name}`;
+            });
+          },
+          onError: function(err) {
+            console.error(err);
+            document.getElementById('result-message').innerHTML =
+              "⚠️ Something went very wrong. Please try again.";
+          }
+        }).render('#paypal-button-container');
+      };
+
+      document.body.appendChild(paypalScript);
+    });
   </script>
 </body>
 </html>

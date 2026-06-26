@@ -1,0 +1,7 @@
+{
+  "name": "ivybeancrochet-site",
+  "private": true,
+  "scripts": {
+    "sync:collections": "node scripts/sync-collections.js"
+  }
+}
